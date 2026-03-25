@@ -20,8 +20,8 @@
             Des soins de qualité avec une équipe médicale expérimentée. Consultez nos médecins spécialistes et prenez rendez-vous en ligne.
           </p>
           <div class="flex flex-wrap gap-4 animate-fade-in-up delay-300">
-            <RouterLink to="/rendez-vous" class="btn-primary text-base px-8 py-4">📅 Prendre rendez-vous</RouterLink>
-            <RouterLink to="/services" class="btn-outline-white text-base px-8 py-4">Nos services →</RouterLink>
+            <RouterLink :to="{ name: 'rendez-vous' }" class="btn-primary text-base px-8 py-4">📅 Prendre rendez-vous</RouterLink>
+            <RouterLink :to="{ name: 'services' }" class="btn-outline-white text-base px-8 py-4">Nos services →</RouterLink>
           </div>
           <div class="mt-8 flex items-center gap-3 animate-fade-in-up delay-400">
             <div class="w-2 h-2 bg-mint-400 rounded-full animate-pulse"></div>
@@ -79,7 +79,7 @@
           <ServiceCard v-for="service in services.slice(0,6)" :key="service.id" :service="service" />
         </div>
         <div class="text-center mt-10">
-          <RouterLink to="/services" class="btn-outline">Voir tous nos services →</RouterLink>
+          <RouterLink :to="{ name: 'services' }" class="btn-outline">Voir tous nos services →</RouterLink>
         </div>
       </div>
     </section>
@@ -94,7 +94,7 @@
             <p class="text-gray-400 leading-relaxed mb-8">
               Depuis 2010, Clinique Santé Plus offre des soins de qualité internationale dans un environnement chaleureux, avec les équipements les plus modernes du Cameroun.
             </p>
-            <RouterLink to="/medecins" class="btn-primary">Rencontrer nos médecins →</RouterLink>
+            <RouterLink :to="{ name: 'medecins' }" class="btn-primary">Rencontrer nos médecins →</RouterLink>
           </div>
           <div class="grid grid-cols-2 gap-4">
             <div v-for="f in features" :key="f.title"
@@ -114,7 +114,7 @@
         <span class="text-5xl mb-6 block">📅</span>
         <h2 class="section-title mb-4">Prêt à prendre soin de vous ?</h2>
         <p class="text-gray-500 mb-8 max-w-xl mx-auto">Prenez rendez-vous en quelques clics. Consultation confirmée sous 24h.</p>
-        <RouterLink to="/rendez-vous" class="btn-primary text-base px-10 py-4">📅 Prendre rendez-vous maintenant</RouterLink>
+        <RouterLink :to="{ name: 'rendez-vous' }" class="btn-primary text-base px-10 py-4">📅 Prendre rendez-vous maintenant</RouterLink>
       </div>
     </section>
 
@@ -128,7 +128,9 @@ import ServiceCard from '@/components/ServiceCard.vue'
 import { getServices } from '@/services/api.js'
 
 const services = ref([])
-onMounted(async () => { services.value = await getServices() })
+onMounted(async () => { 
+  services.value = await getServices() 
+})
 
 const stats    = [{ value:'15+', label:'Années' }, { value:'20+', label:'Médecins' }, { value:'50k+', label:'Patients' }]
 const slots    = ['08h00','09h30','11h00','14h00','15h30','17h00']

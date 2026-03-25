@@ -46,7 +46,7 @@
         <p class="text-white text-opacity-90 mb-6">
           Nos médecins sont disponibles du lundi au samedi.
         </p>
-        <RouterLink to="/rendez-vous" class="inline-flex items-center gap-2 bg-white text-mint-600 font-semibold
+        <RouterLink :to="{ name: 'rendez-vous' }" class="inline-flex items-center gap-2 bg-white text-mint-600 font-semibold
                px-8 py-3 rounded-xl hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5">
           📅 Prendre rendez-vous
         </RouterLink>

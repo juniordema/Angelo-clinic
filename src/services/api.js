@@ -22,7 +22,7 @@ if (USE_MOCK) {
 // ─── Instance Axios (utilisée uniquement si USE_MOCK === false) ───────────────
 const apiClient = axios.create({
   baseURL: API_URL,
-  timeout: 10,
+  timeout: 10000,
   headers: {
     'Content-Type': 'application/json',
     Accept: 'application/json',

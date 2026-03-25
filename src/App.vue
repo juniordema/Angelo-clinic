@@ -8,12 +8,10 @@
     <!-- Navigation fixe -->
     <Navbar />
 
-    <!-- Contenu des pages (transition entre routes) -->
+    <!-- Contenu des pages -->
     <main class="flex-1">
-      <RouterView v-slot="{ Component }">
-        <Transition name="page" mode="out-in">
-          <component :is="Component" />
-        </Transition>
+      <RouterView v-slot="{ Component, route }">
+        <component :is="Component" :key="route.fullPath" />
       </RouterView>
     </main>
 
@@ -50,9 +48,11 @@
 
 <script setup>
 import { computed } from 'vue'
-import { RouterView } from 'vue-router'
+import { RouterView, useRoute } from 'vue-router'
 import Navbar from '@/components/Navbar.vue'
 import Footer from '@/components/Footer.vue'
+
+const route = useRoute()
 
 const whatsappLink = computed(() =>
   `https://wa.me/237699000000?text=${encodeURIComponent('Bonjour Clinique Santé Plus ! Je souhaite prendre rendez-vous.')}`
@@ -60,17 +60,5 @@ const whatsappLink = computed(() =>
 </script>
 
 <style>
-/* Transition entre les pages */
-.page-enter-active,
-.page-leave-active {
-  transition: all 0.25s ease;
-}
-.page-enter-from {
-  opacity: 0;
-  transform: translateY(12px);
-}
-.page-leave-to {
-  opacity: 0;
-  transform: translateY(-8px);
-}
+/* Styles globaux pour l'application */
 </style>

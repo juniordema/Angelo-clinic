@@ -40,7 +40,7 @@
 
         <!-- CTA Button desktop -->
         <RouterLink
-          to="/rendez-vous"
+          :to="{ name: 'rendez-vous' }"
           class="hidden md:flex btn-primary text-sm"
         >
           <span>📅</span> Rendez-vous
@@ -88,7 +88,7 @@
               </RouterLink>
             </li>
             <li class="px-4 pb-3 pt-1">
-              <RouterLink to="/rendez-vous" @click="closeMenu" class="btn-primary w-full justify-center">
+              <RouterLink :to="{ name: 'rendez-vous' }" @click="closeMenu" class="btn-primary w-full justify-center">
                 📅 Prendre rendez-vous
               </RouterLink>
             </li>
@@ -110,10 +110,10 @@ const menuOpen  = ref(false)
 const isScrolled = ref(false)
 
 const navLinks = [
-  { to: '/',            label: 'Accueil'      },
-  { to: '/services',    label: 'Services'     },
-  { to: '/medecins',    label: 'Médecins'     },
-  { to: '/contact',     label: 'Contact'      },
+  { to: { name: 'home' },     label: 'Accueil'  },
+  { to: { name: 'services' }, label: 'Services' },
+  { to: { name: 'medecins' }, label: 'Médecins' },
+  { to: { name: 'contact' },  label: 'Contact'  },
 ]
 
 const toggleMenu = () => { menuOpen.value = !menuOpen.value }

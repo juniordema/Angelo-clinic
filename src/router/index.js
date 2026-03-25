@@ -4,12 +4,12 @@
  */
 import { createRouter, createWebHistory } from 'vue-router'
 
-// Lazy loading des pages pour de meilleures performances
-const HomeView        = () => import('@/views/HomeView.vue')
-const ServicesView    = () => import('@/views/ServicesView.vue')
-const MedecinsView    = () => import('@/views/MedecinsView.vue')
-const RendezVousView  = () => import('@/views/RendezVousView.vue')
-const ContactView     = () => import('@/views/ContactView.vue')
+// Importation des vues (statique)
+import HomeView from '@/views/HomeView.vue'
+import ServicesView from '@/views/ServicesView.vue'
+import MedecinsView from '@/views/MedecinsView.vue'
+import RendezVousView from '@/views/RendezVousView.vue'
+import ContactView from '@/views/ContactView.vue'
 
 const routes = [
   {
@@ -45,16 +45,24 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(import.meta.env.BASE_URL || '/'),
   routes,
-  // Scroll en haut à chaque changement de page
+  // Comportement de défilement amélioré
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) return savedPosition
-    return { top: 0, behavior: 'smooth' }
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve({ top: 0, behavior: 'smooth' })
+      }, 100)
+    })
   }
 })
 
-// Mise à jour du titre de la page
+// Mise à jour du titre et gestion de l'état de chargement
+router.beforeEach((to, from, next) => {
+  next()
+})
+
 router.afterEach((to) => {
   document.title = to.meta.title || 'Clinique Santé Plus'
 })
