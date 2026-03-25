@@ -1,6 +1,5 @@
-# 🏥 Clinique Santé Plus – Douala, Cameroun
+# 🏥 Clinique Angelo Santé Plus – Logpom,Douala, Cameroun
 
-Site web professionnel pour une clinique médicale, développé avec Vue.js 3, Vue Router, Axios et Tailwind CSS.
 
 ---
 
@@ -8,10 +7,6 @@ Site web professionnel pour une clinique médicale, développé avec Vue.js 3, V
 
 ### 1. Cloner et installer les dépendances
 ```bash
-cd clinique-douala
-npm install
-```
-
 ### 2. Variables d'environnement
 Créez un fichier `.env` à la racine :
 ```env
