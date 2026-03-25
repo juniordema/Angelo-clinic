@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-body bg-cream text-navy-800 antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  /* Bouton primaire */
+  .btn-primary {
+    @apply inline-flex items-center gap-2 bg-mint-500 hover:bg-mint-600 text-white font-body font-semibold
+           px-6 py-3 rounded-xl transition-all duration-300 shadow-md hover:shadow-lg
+           hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  /* Bouton secondaire (outline) */
+  .btn-outline {
+    @apply inline-flex items-center gap-2 border-2 border-navy-700 text-navy-700
+           hover:bg-navy-700 hover:text-white font-body font-semibold
+           px-6 py-3 rounded-xl transition-all duration-300;
+  }
+
+  /* Bouton outline blanc (sur fond sombre) */
+  .btn-outline-white {
+    @apply inline-flex items-center gap-2 border-2 border-white text-white
+           hover:bg-white hover:text-navy-800 font-body font-semibold
+           px-6 py-3 rounded-xl transition-all duration-300;
+  }
+
+  /* Carte générique */
+  .card {
+    @apply bg-white rounded-2xl shadow-card hover:shadow-card-hover transition-all duration-300
+           hover:-translate-y-1;
+  }
+
+  /* Section title */
+  .section-title {
+    @apply font-display text-3xl md:text-4xl text-navy-800 font-semibold;
+  }
+
+  /* Badge / pill */
+  .badge {
+    @apply inline-block bg-mint-400 bg-opacity-20 text-mint-600 text-xs font-semibold
+           uppercase tracking-wider px-3 py-1 rounded-full;
+  }
+
+  /* Input */
+  .input-field {
+    @apply w-full border border-gray-200 rounded-xl px-4 py-3 font-body text-navy-800
+           focus:outline-none focus:ring-2 focus:ring-mint-400 focus:border-transparent
+           transition-all duration-200 bg-white placeholder-gray-400;
+  }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes pulse-whatsapp {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(37,211,102,0.5); }
+  50%       { box-shadow: 0 0 0 10px rgba(37,211,102,0); }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+
+.whatsapp-pulse {
+  animation: pulse-whatsapp 2s infinite;
+}
