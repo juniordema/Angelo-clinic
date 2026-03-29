@@ -1,4 +1,4 @@
-npm run<template>
+<template>
   <!--
     Footer.vue
     Pied de page avec liens, infos de contact et mentions légales

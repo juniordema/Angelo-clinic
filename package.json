@@ -1,6 +1,7 @@
 {
   "name": "clinique-douala",
   "version": "1.0.0",
+  "type": "module",
   "description": "Site web clinique médicale - Douala, Cameroun",
   "scripts": {
     "dev": "vite",
