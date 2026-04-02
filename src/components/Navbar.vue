@@ -4,8 +4,8 @@
     Barre de navigation responsive avec menu mobile
   -->
   <header
-    class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
-    :class="isScrolled ? 'bg-white shadow-md' : 'bg-transparent'"
+      class="sticky top-0 left-0 right-0 z-50 transition-all duration-300"
+      :class="isScrolled ? 'bg-white shadow-md' : 'bg-transparent'"
   >
     <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16 md:h-20">
@@ -18,7 +18,7 @@
           </div>
           <div>
             <p class="font-display font-semibold text-navy-800 leading-tight text-sm md:text-base">
-              Clinique Santé Plus
+              Clinique Angelo-Logpom
             </p>
             <p class="text-xs text-gray-500 font-body hidden sm:block">Douala, Cameroun</p>
           </div>
@@ -30,8 +30,9 @@
             <RouterLink
               :to="link.to"
               class="font-body font-medium text-sm px-4 py-2 rounded-lg transition-all duration-200
-                     text-navy-700 hover:text-mint-500 hover:bg-mint-400 hover:bg-opacity-10"
-              active-class="text-mint-500 bg-mint-400 bg-opacity-10"
+                text-gray-900
+                hover:text-mint-500 hover:bg-mint-400 hover:bg-opacity-10"
+                active-class="text-mint-500 bg-mint-400 bg-opacity-10"
             >
               {{ link.label }}
             </RouterLink>
@@ -123,6 +124,7 @@ const handleScroll = () => { isScrolled.value = window.scrollY > 20 }
 
 onMounted(() => window.addEventListener('scroll', handleScroll))
 onUnmounted(() => window.removeEventListener('scroll', handleScroll))
+
 </script>
 
 <style scoped>

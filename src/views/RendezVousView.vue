@@ -46,12 +46,12 @@
             <div class="card p-6">
               <h3 class="font-display font-semibold text-navy-800 text-xl mb-4">📞 Contact direct</h3>
               <div class="space-y-3">
-                <a href="tel:+237699000000"
+                <a href="tel:+237690836901"
                   class="flex items-center gap-3 p-3 bg-cream rounded-xl hover:bg-gray-100 transition">
                   <span class="text-xl">📞</span>
                   <div>
                     <p class="text-xs text-gray-400">Téléphone</p>
-                    <p class="font-semibold text-navy-800">+237 699 000 000</p>
+                    <p class="font-semibold text-navy-800">+237 690 83 69 01</p>
                   </div>
                 </a>
                 <a :href="whatsappLink" target="_blank"
@@ -86,7 +86,7 @@ import { computed } from 'vue'
 import AppointmentForm from '@/components/AppointmentForm.vue'
 
 const whatsappLink = computed(() =>
-  `https://wa.me/237699000000?text=${encodeURIComponent('Bonjour, je souhaite prendre rendez-vous à la Clinique Santé Plus.')}`
+  `https://wa.me/237690836901?text=${encodeURIComponent('Bonjour, je souhaite prendre rendez-vous à la Clinique Angelo.')}`
 )
 
 const horaires = [

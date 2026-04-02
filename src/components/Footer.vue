@@ -21,7 +21,7 @@
             </div>
           </div>
           <p class="text-gray-400 text-sm leading-relaxed">
-            Votre santé est notre priorité. Des soins modernes et humains au cœur de Douala depuis 2010.
+            Votre santé est notre priorité. Des soins modernes et humains au cœur de Douala depuis 2021.
           </p>
         </div>
 
@@ -59,11 +59,11 @@
           <ul class="space-y-3 text-sm text-gray-400">
             <li class="flex items-start gap-2">
               <span class="mt-0.5">📍</span>
-              <span>Boulevard de la Liberté, Akwa<br />Douala, Cameroun</span>
+              <span>Boulevard de la Liberté, Logpom<br />Douala, Cameroun</span>
             </li>
             <li class="flex items-center gap-2">
               <span>📞</span>
-              <a href="tel:+237699000000" class="hover:text-mint-400 transition">+237 699 000 000</a>
+              <a href="tel:+237699000000" class="hover:text-mint-400 transition">+237 690 83 69 01</a>
             </li>
             <li class="flex items-center gap-2">
               <span>✉️</span>
@@ -86,7 +86,7 @@
       <!-- Séparateur -->
       <div class="border-t border-navy-700 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
         <p class="text-gray-500 text-xs">
-          © {{ currentYear }} Clinique Santé Plus – Tous droits réservés.
+          Clinique Angelo – Tous droits réservés.
         </p>
         <p class="text-gray-600 text-xs">
           Conçu avec ❤️ à Douala, Cameroun

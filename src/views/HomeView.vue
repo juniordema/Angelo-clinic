@@ -2,14 +2,13 @@
   <div>
 
     <!-- HERO -->
-    <section class="relative min-h-screen flex items-center bg-navy-900 overflow-hidden pt-20">
-      <div class="absolute inset-0 pointer-events-none">
+    <section class="relative z-0 min-h-screen flex items-center bg-navy-900 overflow-hidden pt-24 pb-20">
+      <div class="absolute inset-0 overflow-hidden pointer-events-none">
         <div class="absolute -right-32 top-1/4 w-96 h-96 bg-mint-500 opacity-10 rounded-full blur-3xl"></div>
         <div class="absolute -left-20 bottom-1/3 w-72 h-72 bg-navy-600 opacity-40 rounded-full blur-2xl"></div>
         <div class="absolute inset-0 opacity-5"
           style="background-image:radial-gradient(circle,#fff 1px,transparent 1px);background-size:32px 32px"></div>
       </div>
-
       <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 grid lg:grid-cols-2 gap-12 items-center">
         <div>
           <span class="badge mb-4 inline-block animate-fade-in-up">🏥 Clinique agréée – Douala, Cameroun</span>
@@ -27,7 +26,7 @@
             <div class="w-2 h-2 bg-mint-400 rounded-full animate-pulse"></div>
             <p class="text-gray-400 text-sm">
               Urgences 24h/24 :
-              <a href="tel:+237699000000" class="text-mint-400 font-semibold hover:underline">+237 699 000 000</a>
+              <a href="tel:+237690836901" class="text-mint-400 font-semibold hover:underline">+237 690 83 69 01</a>
             </p>
           </div>
         </div>
@@ -92,7 +91,7 @@
             <span class="badge mb-4">Pourquoi nous ?</span>
             <h2 class="section-title text-white mb-6">Une clinique moderne<br />au service des Doualais</h2>
             <p class="text-gray-400 leading-relaxed mb-8">
-              Depuis 2010, Clinique Santé Plus offre des soins de qualité internationale dans un environnement chaleureux, avec les équipements les plus modernes du Cameroun.
+              Depuis 2021, la Clinique Santé Angelo offre des soins de qualité internationale dans un environnement chaleureux, avec les équipements les plus modernes du Cameroun.
             </p>
             <RouterLink :to="{ name: 'medecins' }" class="btn-primary">Rencontrer nos médecins →</RouterLink>
           </div>
@@ -128,8 +127,8 @@ import ServiceCard from '@/components/ServiceCard.vue'
 import { getServices } from '@/services/api.js'
 
 const services = ref([])
-onMounted(async () => { 
-  services.value = await getServices() 
+onMounted(async () => {
+  services.value = await getServices()
 })
 
 const stats    = [{ value:'15+', label:'Années' }, { value:'20+', label:'Médecins' }, { value:'50k+', label:'Patients' }]

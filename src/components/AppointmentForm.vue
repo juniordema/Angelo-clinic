@@ -44,7 +44,7 @@
             <input
               v-model="form.nom"
               type="text"
-              placeholder="Ex : Marie Ngono"
+              placeholder="Ex : junior demanou"
               class="input-field"
               :class="errors.nom ? 'border-red-400 ring-1 ring-red-400' : ''"
               @blur="validateField('nom')"

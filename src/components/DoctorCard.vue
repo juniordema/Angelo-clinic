@@ -13,12 +13,15 @@
                group-hover:scale-105 transition-transform duration-300"
         loading="lazy"
       />
+
       <span
         class="absolute -bottom-1 -right-1 w-5 h-5 rounded-full border-2 border-white"
         :class="doctor.disponible ? 'bg-mint-500' : 'bg-gray-300'"
         :title="doctor.disponible ? 'Disponible' : 'Non disponible'"
       ></span>
     </div>
+
+
 
     <h3 class="font-display font-semibold text-navy-800 text-lg leading-tight mb-1">
       {{ doctor.nom }}
